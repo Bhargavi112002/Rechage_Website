@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Style the header */
+        
+        header {
+            background-image: conic-gradient(red, rgb(206, 252, 4));
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        article {
+            float: left;
+            padding: 20px;
+            width: 100%;
+            height: 700px;
+            background-color: white;
+        }
+        
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Style the footer */
+        
+        footer {
+            background-color: red;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        
+        @media (max-width: 600px) {
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        #btn3 {
+            width: 130px;
+            height: 40px;
+            border-radius: 20px;
+            margin-left: 67px !important;
+            border: 2px solid rgb(255, 0, 0);
+            cursor: pointer;
+            margin-left: 4%;
+            background-color: antiquewhite;
+        }
+        
+        #btn2 {
+            width: 90px;
+            height: 40px;
+            border-radius: 20px;
+            margin-left: 8%;
+            border: 2px solid rgb(255, 0, 0);
+            cursor: pointer;
+            margin-left: 4%;
+            background-color: antiquewhite;
+        }
+        
+        #btn4 {
+            width: 150px;
+            height: 40px;
+            border-radius: 20px;
+            margin-left: 3%;
+            border: 2px solid rgb(255, 0, 0);
+            cursor: pointer;
+            margin-left: 4%;
+            background-color: antiquewhite;
+        }
+        
+        #btn5 {
+            width: 120px;
+            height: 35px;
+            border-radius: 20px;
+            margin-left: 3%;
+            border: 2px solid red;
+            cursor: pointer;
+            margin-left: 4%;
+            background-color: antiquewhite;
+        }
+        
+        #btn6 {
+            width: 120px;
+            height: 40px;
+            border-radius: 20px;
+            margin-left: 3%;
+            border: 2px solid red;
+            cursor: pointer;
+            margin-left: 4%;
+            background-color: antiquewhite;
+        }
+        
+        #btn7 {
+            width: 120px;
+            height: 40px;
+            border-radius: 20px;
+            margin-left: 3%;
+            border: 2px solid red;
+            cursor: pointer;
+            margin-left: 4%;
+            background-color: antiquewhite;
+        }
+        
+        #btn8 {
+            width: 120px;
+            height: 40px;
+            border-radius: 20px;
+            margin-left: 4%;
+            border: 2px solid red;
+            cursor: pointer;
+            background-color: antiquewhite;
+        }
+        
+        .btn9 {
+            width: 50px;
+            height: 40px;
+            color: #000;
+            background-color: aqua;
+            margin-top: 2%;
+        }
+        /* .plans{
+        margin-top: 3%;
+        width: 55px;
+        height: 20px;
+        border-radius: 20px;
+        
+      }
+      .plans2{
+        width: 65px;
+        height: 20px;
+
+      } */
+        
+        #one_div {
+            display: flex;
+        }
+        
+        #one_div div {
+            margin-left: 2px;
+        }
+        
+        .btn {
+            border: 1px solid red;
+            width: 90px;
+            height: 40px;
+            margin-top: 20px;
+            border-radius: 20px;
+            background-color: white;
+            color: blue;
+            font-weight: bolder;
+        }
+        /* #one_div div button {
+            border: 1px solid red;
+            width: 90px;
+            height: 40px;
+            margin-top: 20px;
+            border-radius: 20px;
+            background-color: white;
+            color: blue;
+            font-weight: bolder;
+        }
+         */
+        
+        #one_div div button:hover {
+            cursor: pointer;
+            background-color: aquamarine;
+            color: black;
+            /* font-size: 17px; */
+        }
+        
+        .div4 {
+            margin-left: 8%;
+        }
+        
+        #one_div {
+            /* border: 1px solid red; */
+            width: 100%;
+            height: 95%;
+            margin-top: 5px;
+        }
+        
+        #data {
+            /* border: 1px solid red; */
+            width: 100px;
+        }
+        
+        #truly_un {
+            /* border: 1px solid rgb(55, 0, 255); */
+            width: 250px;
+        }
+        
+        #inr {
+            /* border: 1px solid teal; */
+            width: 170px;
+        }
+        
+        #talktime {
+            /* border: 1px solid pink; */
+            width: 150px;
+        }
+        
+        #disney_hotstar {
+            /* border: 1px solid rgb(0, 132, 255); */
+            width: 150px;
+        }
+        
+        #other_packs {
+            /* border: 1px solid red; */
+            width: 160px;
+        }
+        
+        #plan {
+            /* border: 1px solid salmon; */
+            width: 150px;
+        }
+        
+        .btn_inr {
+            margin-left: 40px;
+        }
+        
+        .btn_tt {
+            margin-left: 27px;
+        }
+        
+        .btn_dh {
+            margin-left: 27px;
+        }
+        
+        .btn_pv {
+            margin-left: 27px;
+        }
+        
+        .btn_op {
+            margin-left: 27px;
+        }
+        
+        .btn_tu {
+            margin-left: 30px;
+        }
+        
+        #plans {
+            width: 55%;
+            margin-top: 20px;
+            height: 300px;
+        }
+        
+        #main_div {
+            display: flex;
+        }
+        
+        #btn_pay {
+            margin-left: 100px;
+            margin-top: 50px;
+            position: fixed;
+            background-color: blue;
+            color: white;
+        }
+        
+        #btn_pay:hover {
+            cursor: pointer;
+            background-color: red;
+            color: white;
+        }
+        
+        #plan_B {
+            /* border: 1px solid red; */
+            height: 200px;
+        }
+        
+        p {
+            color: rgb(68, 0, 255);
+            font-style: italic;
+            font-weight: bolder;
+        }
+        
+        #home {
+            /* border: 1px solid rgb(66, 5, 207); */
+            margin-left: -1500px;
+            transform: translateY(-170px);
+            width: 200px;
+            height: 40px;
+            border-radius: 30px;
+            font-family: sans-serif;
+            font-size: 20px;
+            color: white;
+            background-image: conic-gradient(red, rgb(206, 252, 4));
+            /* border: none; */
+        }
+        
+        #home:hover {
+            cursor: pointer;
+            background-color: rgb(252, 53, 3);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <header>
+        <h2>VI Recharge Plans</h2>
+        <a href="../Fainal code/main.html"><button id="home">Home</button></a>
+    </header>
+    <div id="main_div">
+        <div id="one_div">
+            <div id="data">
+                <button onclick="data()" id="btn2">Data</button><br>
+                <button class="btn" onclick="btn43()">181</button><br>
+                <button class="btn" onclick="btn44()">19</button><br>
+                <button class="btn" onclick="btn45()">65</button><br>
+                <button class="btn" onclick="btn46()">301</button><br>
+                <button class="btn" onclick="btn47()">58</button><br>
+                <button class="btn" onclick="btn48()">98</button><br>
+                <button class="btn" onclick="btn49()">148</button><br>
+                <button class="btn" onclick="btn50()">149</button><br>
+            </div>
+            <div id="truly_un">
+                <button id="btn3" class="tu" onclick="truly()"> Truly Unlimited</button> <br>
+                <button class="btn btn_tu" onclick="btn51()">719</button>
+                <button class="btn btn_tu" onclick="btn52()">155</button><br>
+                <button class="btn btn_tu" onclick="btn53()">299</button>
+                <button class="btn btn_tu" onclick="btn54()">479</button><br>
+                <button class="btn btn_tu" onclick="btn55()">265</button>
+                <button class="btn btn_tu" onclick="btn56()">455</button><br>
+                <button class="btn btn_tu" onclick="btn57()">179</button>
+                <button class="btn btn_tu" onclick="btn58()">239</button><br>
+                <button class="btn btn_tu" onclick="btn59()">359</button>
+                <button class="btn btn_tu" onclick="btn60()">199</button><br>
+                <button class="btn btn_tu" onclick="btn61()">296</button>
+                <button class="btn btn_tu" onclick="btn62()">319</button><br>
+                <button class="btn btn_tu" onclick="btn63()">549</button>
+                <button class="btn btn_tu" onclick="btn64()">209</button><br>
+                <button class="btn btn_tu" onclick="btn65()">489</button>
+                <button class="btn btn_tu" onclick="btn66()">509</button><br>
+                <button class="btn btn_tu" onclick="btn67()">519</button>
+                <button class="btn btn_tu" onclick="btn68()">666</button><br>
+                <button class="btn btn_tu" onclick="btn69()">699</button>
+                <button class="btn btn_tu" onclick="btn70()">799</button><br>
+                <button class="btn btn_tu" onclick="btn71()">999</button>
+            </div>
+            <div id="inr">
+                <button id="btn4" onclick="inr()"> internationalRoaming</button><br>
+                <button class="btn btn_inr" onclick="btn72()">2,997</button><br>
+                <button class="btn btn_inr" onclick="btn73()">899</button><br>
+                <button class="btn btn_inr" onclick="btn74()">756</button><br>
+                <button class="btn btn_inr" onclick="btn75()">2,998</button><br>
+                <button class="btn btn_inr" onclick="btn76()">649</button><br>
+                <button class="btn btn_inr" onclick="btn77()">755</button><br>
+            </div>
+            <div id="talktime">
+                <button id="btn5" onclick="talktime()">talktime</button><br>
+                <button class="btn btn_tt" class="btn" onclick="btn78()">100</button><br>
+                <button class="btn btn_tt" onclick="btn79()">10</button><br>
+                <button class="btn btn_tt" onclick="btn80()">500</button><br>
+                <button class="btn btn_tt" onclick="btn81()">20</button><br>
+                <button class="btn btn_tt" onclick="btn82()">1,000</button><br>
+                <button class="btn btn_tt" onclick="btn83()">5,000</button><br>
+            </div>
+            <div id="disney_hotstar">
+                <button id="btn6" onclick="disney()">Disneyhotstar</button><br>
+                <button class="btn btn_dh" onclick="btn84()">499</button><br>
+                <button class="btn btn_dh" onclick="btn85()">399</button><br>
+                <button class="btn btn_dh" onclick="btn86()">839</button><br>
+                <button class="btn btn_dh" onclick="btn87()">3,359</button><br>
+            </div>
+            <div id="plan">
+                <button id="btn8" onclick="Plan_Vouchers()">Plan Vouchers</button><br>
+                <button class="btn btn_pv" onclick="btn88()">1,799</button><br>
+                <button class="btn btn_pv" onclick="btn89()">2,999</button><br>
+            </div>
+
+            <div id="other_packs">
+                <button id="btn7" onclick="otherpack()">otherpacks</button><br>
+                <button class="btn btn_op" onclick="btn90()">18</button>
+            </div>
+
+        </div>
+        <div style="border: 1px solid red;" id="plans">
+            <p id="plan_B"></p>
+            <a href="../../payment/pay.html"><button class="btn" id="btn_pay">Pay</button></a>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    function btn43() {
+        var text1 = document.getElementById("plan_B").innerText = "voice:1GBperDayfor30Days,\n validity:30days"
+    }
+
+    function btn44() {
+        var text1 = document.getElementById("plan_B").innerText = "voice:1GBperDayfor1Daypack,\n  Data:1GB, \n Validity:1Day"
+    }
+
+    function btn45() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:4GBDataforExistingpack\n Data:4GB,  \n Validity:Existingplan"
+    }
+
+    function btn46() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:50GBDataforExistingpack,\n Data: 50GB\n Validity:Existingplan"
+    }
+
+    function btn47() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:,\n SMS:100 SMS per day, \n Data:A 1.5GB high-speed data limit \n Validity:84 Days"
+    }
+
+    function btn48() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 1.5GB high-speed data limit \n Validity:28 Days"
+    }
+
+    function btn49() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 2.5GB high-speed data limit \n Validity:365 Days \n Offer: 75GB data + 23 days"
+    }
+
+    function btn50() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 2GB high-speed data limit \n Validity:23 Days"
+    }
+
+    function btn51() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 1GB high-speed data limit \n Validity:24 Days"
+    }
+
+    function btn52() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 1.5GB high-speed data limit \n Validity:23 Days"
+    }
+
+    function btn53() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 1GB high-speed data limit \n Validity:28 Days"
+    }
+
+    function btn54() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 1GB high-speed data limit \n Validity:20 Days"
+    }
+
+    function btn55() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 1GB high-speed data limit \n Validity:14 Days"
+    }
+
+    function btn56() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 2.5GB high-speed data limit \n Validity:365 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn57() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 2.5GB high-speed data limit \n Validity:56 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn58() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 2.5GB high-speed data limit \n Validity:365 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn59() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 2.5GB high-speed data limit \n Validity:84 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn60() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:NA,\n SMS:NA, \n Data:A 55GB high-speed data limit \n Validity:55 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn61() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 2GB high-speed data limit \n Validity:275 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn62() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 2GB high-speed data limit \n Validity:84 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn63() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 2.5GB high-speed data limit \n Validity:55 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn64() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 2.5GB high-speed data limit \n Validity:500 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn65() {
+        var text1 = document.getElementById("plan_B").innerText = "Data:6GB,\n Validity:Base Plan"
+    }
+
+    function btn66() {
+        var text1 = document.getElementById("plan_B").innerText = "Data:12GB,\n Validity:Base Plan"
+    }
+
+    function btn67() {
+        var text1 = document.getElementById("plan_B").innerText = " Voice:NA \n SMS: NA \n Data:30GB,\n Validity:30Days"
+    }
+
+    function btn68() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:NA \n SMS: NA \n Data:50GB,\n Validity:30Days"
+    }
+
+    function btn69() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 1.5GB high-speed data limit \n Validity:56 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn70() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 1.5GB high-speed data limit \n Validity:336 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn71() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 2GB high-speed data limit \n Validity:56 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn72() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 2GB high-speed data limit \n Validity:365 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn73() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 3GB high-speed data limit \n Validity:28 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn74() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 3GB high-speed data limit \n Validity:84 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn75() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:50 SMS for 28(12Cycles), \n Data:A 2GB/28days(12Cycles) high-speed data limit \n Validity:336 Days(28Days*12Cycles) \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn76() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:300, \n Data:A 0.5GB high-speed data limit \n Validity:23 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn77() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:50 SMS per day, \n Data:A 2.5GB(0.1GB/day+200MB) high-speed data limit \n Validity:23 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn78() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:300 SMS, \n Data:A 0.5GB high-speed data limit \n Validity:28 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn79() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 1GB high-speed data limit \n Validity:28 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn80() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:100 SMS per day, \n Data:A 2GB high-speed data limit \n Validity:28 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn81() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Unlimited voice calling,\n SMS:50 SMS per day, \n Data:A 3GB(0.1GB/day+200MB) high-speed data limit \n Validity:28 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn82() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:NA,\n SMS:NA, \n Data:A 2GB high-speed data limit \n Validity:28 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn83() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:NA,\n SMS:NA, \n Data:A 1GB high-speed data limit \n Validity:28 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn84() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:NA,\n SMS:NA, \n Data:A 0.5GB high-speed data limit \n Validity:28 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn85() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:NA,\n SMS:NA, \n Data:A 6GB high-speed data limit \n Validity:28 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn86() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:NA,\n SMS:NA, \n Data:A 2GB high-speed data limit \n Validity:28 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn87() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:Rs.933.05,\n SMS:5 ISD SMS, \n Validity:28 Days \n Free Apps:Jio Cinema,JioTV,Jio Security,Jio Cloud"
+    }
+
+    function btn88() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:outgoing local calls + outgoing class to India,\n SMS:1500 ISD SMS, \n Data:A 5GB high-speed data limit \n Validity:28 Days \n Countries:22"
+    }
+
+    function btn89() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:outgoing local calls + outgoing class to India,\n SMS:100 ISD SMS, \n Data:A 250MB high-speed data limit \n Validity:7 Days \n Countries:22"
+    }
+
+    function btn90() {
+        var text1 = document.getElementById("plan_B").innerText = "Voice:outgoing local calls + outgoing class to India,\n SMS:100 ISD SMS, \n Data:A 250MB high-speed data limit \n Validity:28 Days \n Countries:22"
+    }
+</script>
